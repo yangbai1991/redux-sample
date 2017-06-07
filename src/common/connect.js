@@ -2,16 +2,16 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
 export default (App, actions, type) => {
-	const mapStateToProps = state => {
-		return state[type] || state;
-	};
+    const mapStateToProps = state => {
+        return state[type] || state;
+    };
 
-	const mapDispatchToProps = dispatch => {
-		return bindActionCreators(actions, dispatch);
-	};
+    const mapDispatchToProps = dispatch => {
+        return bindActionCreators(actions, dispatch);
+    };
 
-	return connect(
+    return connect(
 		mapStateToProps,
 		mapDispatchToProps
 	)(App);
-}
+};
